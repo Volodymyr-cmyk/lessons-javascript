@@ -52,6 +52,12 @@ for (let i = 1; i <= countTicket; i++) {
     console.log(`Квиток ${i} з ${countTicket}`)
 }
 
+let processedTickets = 0;
+let freeTickets = 0;
+let discountTickets = 0;
+let fullPriceTickets = 0;
+let totalSum = 0;
+
 let age = +prompt("Введіть свій вік: ");
 while (Number.isNaN(age) && age >= -1 && age <= 90) {
     alert("Введіть коректний вік")
@@ -93,7 +99,19 @@ if (age >= 18 && age <= 25){
     console.log(`Ціна квитка: ${price.toFixed(2)} грн`);
 }
 
-if (price === 0){
-    alert("Квиток безкоштовний");
-    continue;
+// if (price === 0){
+//     processedTickets++;
+//     freeTickets++;
+//     continue;
+//}
+
+let endPrice = total;
+if (total > 1000){
+    endPrice = total * 0.95;
 }
+
+console.log(`Оброблено квитків: ${processedTickets}`);
+console.log(`Безкоштовних квитків: ${freeTickets}`);
+console.log(`Квитків зі знижкою: ${discountTickets}`);
+console.log(`Квитків за повною ціною: ${fullPriceTickets}`);
+console.log(`Загальна сума: ${endPrice}`)
