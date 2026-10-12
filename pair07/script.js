@@ -76,14 +76,37 @@
 //__________________________________________________--
 
 
-function getSpendFuel(fuel){
-    return fuel / 100;
-}
+// function getSpendFuel(distance, fuelSpend){
+//     return (distance / 100) * fuelSpend;
+// }
+//
+// function getFuelPrice(fuelNeeded, price) {
+//     return fuelNeeded * price;
+// }
+//
+// function getDistancePrice(price, fuelSpend){
+//     return (fuelSpend / 100) * price;
+// }
+//
+// let City1 = prompt("Введіть назву першого міста")
+// let City2 = prompt("Введіть назву другого міста")
+// let distance = +prompt("Яка відстань між містами?")
+// let fuelSpend = +prompt("Розхід пального")
+// let price = +prompt("Вартість за 1 літр пального в грн")
+//
+// let fuelNeeded = getSpendFuel(distance, fuelSpend)
+// let fuelPrice = getFuelPrice(fuelNeeded, price)
+// let distancePrice = getDistancePrice(fuelSpend, price)
+//
+// console.log(`Поїздка з міста ${City1} до міста ${City2}`);
+// console.log(`Відстань: ${distance} км`);
+// console.log(`Розхід на 100 км: ${fuelSpend}`);
+// console.log(`Ціна за літр: ${price} грн`);
+// console.log(`Необхідно: ${fuelNeeded.toFixed(2)} л`);
+// console.log(`Вартість 1 км: ${distancePrice.toFixed(2)} грн`);
+// console.log(`Загальна сума на поїздку: ${fuelPrice.toFixed(2)} грн`);
 
-function getDistancePrice(price, fuel){
-    return fuel * price;
-}
 
-let City1 = prompt("Введіть назву першого міста")
-let City2 = prompt("Введіть назву другого міста")
+//_____________________________________________________________________
+
 
