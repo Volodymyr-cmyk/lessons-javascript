@@ -99,3 +99,69 @@ if (confirm("Видалити гру " + lastGame.title + "?")) {
 } else {
     alert("Видалення скасовано");
 }
+
+let searchUserGame = prompt("Введіть назву гри")
+let searchGame = games.find(book => book.title === searchUserGame);
+if (searchGame !== undefined) {
+    alert(searchGame);
+}else{
+    alert("такої гри немає")
+}
+
+let maxPrice = +(prompt("Введіть максимальну суму:"));
+let cheapGames = games.filter(function (game) {
+    return game.price <= maxPrice;
+});
+console.log("Ігри до " + maxPrice + " грн:");
+console.log(cheapGames);
+
+let goodGames = games.filter(function (game) {
+    return game.rating >= 8;
+});
+console.log("Ігри з рейтингом від 8:");
+console.log(goodGames);
+
+let titles = games.map(game => game.title);
+console.log(titles);
+
+let gamesSales = games.map(game => {
+    return{
+        id: game.id,
+        title: game.title,
+        genre: game.genre,
+        price: Math.round(game.price * 0.85),
+        rating: game.rating,
+        available: game.available,
+    }
+});
+console.log(gamesSales);
+
+let sortedByPrice = games.slice().sort((a, b) => a.price - b.price);
+console.log(sortedByPrice);
+
+//_______Індивідуальне_завдання___________________
+
+const name = "Володимир";
+
+let nameLength = name.length;
+
+let budget = nameLength * 100;
+console.log("Мій бюджет: " + budget + " грн");
+
+const availableGames = games.filter(function (game) {
+    return game.available === true;
+});
+
+let totalPrice = 0;
+console.log("Доступні ігри:");
+for (let game of availableGames) {
+    console.log(game.title + " - " + game.price + " грн");
+    totalPrice = totalPrice + game.price;
+}
+console.log("Загальна вартість: " + total + " грн");
+
+if (totalPrice > budget) {
+    alert("Грошей не вистачає! Вартість " + totalPrice + " грн, а бюджет " + budget + " грн");
+} else {
+    alert("Грошей вистачає! Залишок: " + (budget - totalPrice) + " грн");
+}
