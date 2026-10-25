@@ -14,14 +14,14 @@
 //     console.log(`${key}: ${book[key]}`);
 // }
 
-let books = [
-    {id: 1, title : "Кобзар", author : "Тарас Шевченко", price : 500, available: true},
-    {id: 1, title : "Лісова Пісня", author : "Леся Українка", price : 600, available: false},
-    {id: 1, title : "Тигролови", author : "Іван Багряний", price : 450, available: true},
-    {id: 1, title : "Енеїда", author : "Іван Котляревський", price : 500, available: false}
-]
+// let books = [
+//     {id: 1, title : "Кобзар", author : "Тарас Шевченко", price : 500, available: true},
+//     {id: 1, title : "Лісова Пісня", author : "Леся Українка", price : 600, available: false},
+//     {id: 1, title : "Тигролови", author : "Іван Багряний", price : 450, available: true},
+//     {id: 1, title : "Енеїда", author : "Іван Котляревський", price : 500, available: false}
+// ]
 // console.log(books);
-books.push({id: 5, title: "Захар Беркут", author: "Іван Франко", price : 600, available: false});
+// books.push({id: 5, title: "Захар Беркут", author: "Іван Франко", price : 600, available: false});
 
 // for (let book of books) {
 //     console.log(`${book.title} - ${book.author}`);
@@ -63,5 +63,39 @@ books.push({id: 5, title: "Захар Беркут", author: "Іван Фран�
 // });
 // console.log(booksSales);
 
-let sortedByPrice = books.slice().sort((a, b) => a.price - b.price);
-console.log(sortedByPrice);
+// let sortedByPrice = books.slice().sort((a, b) => a.price - b.price);
+// console.log(sortedByPrice);
+
+//______________________________________________________________________---
+
+let games = [
+    { id: 1, title: "The Witcher 3", genre: "RPG",        price: 499, rating: 10, available: true  },
+    { id: 2, title: "Cyberpunk 2077", genre: "Action RPG", price: 899, rating: 8,  available: true  },
+    { id: 3, title: "FIFA 24",        genre: "Sport",      price: 1299, rating: 6, available: false },
+    { id: 4, title: "Minecraft",      genre: "Sandbox",    price: 599, rating: 9,  available: true  },
+    { id: 5, title: "Stardew Valley", genre: "Simulation", price: 250, rating: 9,  available: true  },
+    { id: 6, title: "Need for Speed", genre: "Racing",     price: 750, rating: 7,  available: false }
+];
+
+let total = games.filter(function(game){
+    return games
+})
+
+console.log(total);
+
+console.log(`Загальна кількість ігор: ${games.length}`);
+
+let newTitle = prompt("Введіть назву гри:");
+let newGenre = prompt("Введіть жанр:");
+let newPrice = +(prompt("Введіть ціну:"));
+let newRating = +(prompt("Введіть рейтинг:"));
+
+games.push({id: 7, title: newTitle, genre: newGenre, price: newPrice, rating: newRating, available: true});
+
+let lastGame = games[games.length - 1];
+if (confirm("Видалити гру " + lastGame.title + "?")) {
+    games.pop();
+    alert("Гру видалено");
+} else {
+    alert("Видалення скасовано");
+}
