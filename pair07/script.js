@@ -110,3 +110,65 @@
 //_____________________________________________________________________
 
 
+function menu() {
+    let choice;
+
+    do {
+        choice = prompt(
+            "Меню програми:\n" +
+            "1 — Зареєструватися\n" +
+            "2 — Увійти в акаунт\n" +
+            "0 — Вийти"
+        );
+
+        if (choice === "1") {
+            registerUser();
+        } else if (choice === "2") {
+            loginUser();
+        } else if (choice === "0") {
+            alert("Програму завершено.");
+        } else {
+            alert("Такого пункту меню немає!");
+        }
+    } while (choice !== "0");
+}
+
+function registerUser() {
+    savedLogin = prompt("Введіть логін:");
+    savedPassword = prompt("Введіть пароль:");
+    isRegistered = true;
+    alert("Реєстрація успішна!");
+}
+
+function loginUser() {
+    if (isRegistered === false) {
+        alert("Спочатку зареєструйся!");
+        return;
+    }
+
+    let attempts = 3;
+
+    while (attempts > 0) {
+        let login = prompt("Введіть логін:");
+        let password = prompt("Введіть пароль:");
+
+        if (login === savedLogin && password === savedPassword) {
+            alert("Вхід дозволено!");
+            return;
+        }
+
+        attempts = attempts - 1;
+
+        if (attempts > 0) {
+            alert("Помилка! Залишилось спроб: " + attempts);
+        }
+    }
+
+    alert("Вхід заблоковано! Три невдалі спроби.");
+}
+
+let savedLogin;
+let savedPassword;
+let isRegistered = false;
+
+menu()
