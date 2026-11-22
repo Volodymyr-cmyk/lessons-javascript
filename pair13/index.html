@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+    <header class="header">
+        <h1>Клуб подій</h1>
+        <p>Керуйте заявками на участь у шкільних активностях</p>
+    </header>
+
+    <div class="layout">
+        <section class="block form-block">
+            <h2>Нова заявка</h2>
+            <label for="nameInput">Ім’я учасника</label>
+            <input id="nameInput" type="text" placeholder="Ім'я Прізвище">
+            <label for="eventInput">Назва події</label>
+            <input id="eventInput" type="text" placeholder="Назва події">
+            <p id="errorMessage" class="error" role="alert"></p>
+            <button id="addButton" class="add-btn" type="button">+ Додати заявку</button>
+        </section>
+
+        <section class="block list-block">
+            <h2>Учасники</h2>
+            <div class="stats">
+                <p class="stat">Усього заявок <strong id="totalCounter">0</strong></p>
+                <p class="stat">Підтверджено <strong id="confirmedCounter">0</strong></p>
+            </div>
+            <p id="emptyMessage" class="empty">Заявок поки немає</p>
+            <ul id="requestList"></ul>
+            <button id="clearButton" class="clear-btn" type="button">Очистити всі</button>
+        </section>
+    </div>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>

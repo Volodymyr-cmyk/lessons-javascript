@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body{
+    background: #f0f4fc;
+    color: #1c2a45;
+    font-family: Montserrat, sans-serif;
+}
+.app{
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.layout{
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+.block{
+    background: #fff;
+    padding: 20px;
+    border-radius: 16px;
+}
+.form-block{
+    width: 275px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.list-block{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+input{
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #eef2fc;
+}
+button{
+    padding: 10px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover{
+    opacity: 0.7;
+}
+.add-btn{
+    background: #3b5bdb;
+    color: #fff;
+    padding: 14px;
+}
+.error{
+    color: #c0392b;
+}
+.stats{
+    display: flex;
+    gap: 10px;
+}
+.stat{
+    background: #eef2fc;
+    border-radius: 10px;
+    padding: 10px 16px;
+}
+.stat strong{
+    display: block;
+    font-size: 22px;
+}
+.empty{
+    text-align: center;
+    color: #8591a8;
+}
+.hidden{
+    display: none;
+}
+#requestList{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border: 2px solid #dbe3f4;
+    border-radius: 12px;
+}
+.card.confirmed{
+    border-color: #b9e6cb;
+    background: #f4fcf7;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+.event{
+    color: #6b7a93;
+    font-size: 13px;
+}
+.status{
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #ffeed4;
+    font-size: 12px;
+}
+.card.confirmed .status{
+    background: #d3f5e1;
+}
+.actions{
+    display: flex;
+    gap: 8px;
+}
+.confirm-btn{
+    background: #e6edfc;
+}
+.delete-btn{
+    background: #fde9e7;
+}
+.clear-btn{
+    background: none;
+    color: #6b7a93;
+    align-self: flex-start;
+    padding: 0;
+}
